@@ -20,4 +20,13 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('Addtional Test: returns the string if given a string', () => {
+    expect(_.identity('echo')).toBe('echo');
+  });
+
+  it('Addtional Test: returns undefined if given undefined', () => {
+    expect(_.identity(undefined)).toBe(undefined);
+  });
+
 });

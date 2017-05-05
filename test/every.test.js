@@ -17,5 +17,23 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    it('returns false if not all numbers in an array are odd and we test for odd numbers', () => {
+      const nums = [1, 3, 5, 6, 7];
+      expect(_.every(nums, num => num % 2 === 1)).toBe(false);
+    });
+
+    it('Addtional test: returns true if all numbers in an array are greater than 10', () => {
+      const nums = [10.1, 11, 12, 123, 14, 15];
+      expect(_.every(nums, num => num > 10)).toBe(true);
+    });
+
+    it('Addtional test: returns false if not all numbers in an array are greater than 10', () => {
+      const nums = [11, 12, 13, -10];
+      expect(_.every(nums, num => num % 2 === 1)).toBe(false);
+    });
+
   });
+
+
+
 });

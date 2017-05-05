@@ -18,4 +18,19 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('Addtional Test: returns true for an actual array', () => {
+    expect(_.isArrayLike(['a','b','c'])).toBe(true);
+  });
+
+  it('Addtional Test: returns true for an array-like object', () => {
+    const arrayLikeObj = {
+      length: 2,
+      'a': 1,
+      'b': 2
+    };
+    expect(_.isArrayLike(arrayLikeObj)).toBe(true);
+  });
+
+
 });
