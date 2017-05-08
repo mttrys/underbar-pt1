@@ -10,7 +10,7 @@ const first = function(array, n = 1) {
 
 // Returns the last n elements of the given array.
 const last = function(array, n = 1) {
-  return n === 1 ? array[array.length - 1] : array.slice(Math.max(0, array.length - n));
+  return n === 1 ? array[array.length - 1] : array.slice(-numberx);
 };
 
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
@@ -119,7 +119,7 @@ const reject = function(arr, callback=identity) {
 const uniq = function(obj) {
   const foundItems = {};
   return filter(obj, item => {
-    return !(item in foundItems) && (foundItems[item] = true);
+    return !(item in foundItems);
   });
 };
 
